@@ -20,12 +20,12 @@ class DService(HoroDatage):
 	DS_Sujet = models.CharField(max_length=30)
 	DS_Desc = models.CharField(max_length=30)
 	# Statut
-	# priorité
-	# Assigné à
+	# priorite
+	# Assigne a
 	# Debut
 	# Echeance
 	# Temps estime
-	# % realisé
+	# % realise
 	# Fichiers
 	# Observateurs
 

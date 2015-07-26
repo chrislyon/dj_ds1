@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+{% load i18n admin_tools_menu_tags %}
+
+{% block title %}{{ title }} | {% trans 'Generation DOC-TEST' %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'Django administration' %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<form action="gnr_doc" method="post">
+{% csrf_token %}
+<table>
+{{ form }}
+</table>
+<input type="submit" value="Submit" />
+</form>
+
+{% endblock %}
+

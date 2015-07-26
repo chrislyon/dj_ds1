@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+	'admin_tools',
+	'admin_tools.theming',
+	'admin_tools.menu',
+	'admin_tools.dashboard',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,7 +60,7 @@ ROOT_URLCONF = 'dj_ds1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ BASE_DIR ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

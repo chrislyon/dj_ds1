@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+{% load i18n admin_tools_menu_tags %}
+
+{% block title %}{{ title }} | {% trans 'TITRE' %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'TEST FORMULAIRE' %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<form action="thanks" method="post">
+{% csrf_token %}
+<table>
+{{ form }}
+</table>
+<input type="submit" value="Submit" />
+</form>
+
+{% endblock %}
+

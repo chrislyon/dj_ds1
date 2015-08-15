@@ -1,13 +1,35 @@
-{% extends "admin/base.html" %}
+{% extends "tst1/base_tst1.html" %}
 {% load i18n admin_tools_menu_tags %}
+{% load staticfiles %}
 
-{% block title %}{{ title }} | {% trans 'Generation DOC-TEST' %}{% endblock %}
+{% block title %}{{ title }} | {% trans 'TITRE DE LA PAGE ' %}{% endblock %}
+{% block extrahead %}
+<script type="text/javascript" src="/static/Brython/brython.js"></script>
 
+{% endblock %}
 {% block branding %}
-<h1 id="site-name">{% trans 'Django administration' %}</h1>
+<h1 id="site-name">{% trans 'TEST DE PAGE / BASE ADMIN DJANGO' %}</h1>
+{% endblock %}
+
+{% block bodyonload %}
+onload="brython()"
+
 {% endblock %}
 
 {% block content %}
+
+<script type="text/python">
+from browser import document as doc
+from browser import alert
+
+def echo(*args):
+    alert("Hello %s !" %doc["zone"].value)
+
+	doc["test"].bind("click", echo)
+
+</script>
+
+<p>Your name is : <input id="zone"><button id="test">clic !</button>
 
 <form action="gnr_doc" method="post">
 {% csrf_token %}
@@ -16,6 +38,7 @@
 </table>
 <input type="submit" value="Submit" />
 </form>
+
 
 {% endblock %}
 

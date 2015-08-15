@@ -1,0 +1,14 @@
+[
+{"fields": 
+	{"In_Nom": "SRVNBS_PRT", "h_datmod": "2015-08-15T07:15:28.128Z", "statut": true, "In_IP": "127.0.0.1", "In_OSTYPE": "UNIX", "h_datcre": "2015-08-15T07:15:28.128Z", "In_Desc": " ", "In_OSVersion": "RHEL 6.4", "In_Type": "VM"},
+	"model": "datatable.serveur", "pk": 1},
+{"fields": 
+	{"In_Nom": "MAG0005CM", "h_datmod": "2015-08-15T07:15:36.815Z", "statut": true, "In_IP": "127.0.0.1", "In_OSTYPE": "UNIX", "h_datcre": "2015-08-15T07:15:36.815Z", "In_Desc": " ", "In_OSVersion": "RHEL 5.9", "In_Type": "VM"},
+	"model": "datatable.serveur", "pk": 2},
+{"fields": 
+	{"In_Nom": "SRVNBS_EDI", "h_datmod": "2015-08-15T07:15:28.128Z", "statut": true, "In_IP": "127.0.0.1", "In_OSTYPE": "UNIX", "h_datcre": "2015-08-15T07:15:28.128Z", "In_Desc": " ", "In_OSVersion": "RHEL 6.4", "In_Type": "VM"},
+	"model": "datatable.serveur", "pk": 3},
+{"fields": 
+	{"In_Nom": "MAG0006CM", "h_datmod": "2015-08-15T07:15:36.815Z", "statut": true, "In_IP": "127.0.0.1", "In_OSTYPE": "UNIX", "h_datcre": "2015-08-15T07:15:36.815Z", "In_Desc": " ", "In_OSVersion": "RHEL 5.9", "In_Type": "VM"},
+	"model": "datatable.serveur", "pk": 4}
+]

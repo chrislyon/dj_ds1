@@ -1,0 +1,93 @@
+{% extends "tst1/base_tst1.html" %}
+{% load i18n admin_tools_menu_tags %}
+{% load staticfiles %}
+
+{% block title %}{{ title }} | {% trans 'TITRE DE LA PAGE ' %}{% endblock %}
+{% block extrahead %}
+<script src='/static/jquery-2.1.4.min.js' type="text/javascript"></script>
+<script src='/static/jquery-ui/jquery-ui.js' type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/static/DataTables/media/css/jquery.dataTables.css">
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="/static/DataTables/media/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript">
+var data = [
+[ "Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$3,120" ],
+[ "Tiger Nixon", "System Architect", "Edinburgh", "5422", "2011/04/25", "$3,120" ],
+[ "Tiger Nixon", "System Architect", "Edinburgh", "5423", "2011/04/25", "$3,120" ],
+[ "Tiger Nixon", "System Architect", "Edinburgh", "5424", "2011/04/25", "$3,120" ],
+[ "Tiger Nixon", "System Architect", "Edinburgh", "5425", "2011/04/25", "$3,120" ],
+[ "Garrett Winters", "Director", "Edinburgh", "8422", "2011/07/25", "$5,300" ]
+]
+
+$(document).ready( function () {
+	$('#dataTable').DataTable( { data: data } );
+	} );
+
+</script>
+
+
+<!--
+	serverSide: true,
+	processing: true,
+	paging: true,
+	ordering: true,
+	-->
+
+<script>
+$(document).ready( function () {
+$("#clients_list").dataTable({
+	ajax: "/dt/data"
+});
+} );
+</script>
+
+{% endblock %}
+{% block branding %}
+<h1 id="site-name">{% trans 'TEST DE PAGE / BASE ADMIN DJANGO' %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="dataTable">
+<thead>
+	<tr>
+		<th>Col 1</th>
+		<th>Col 2</th>
+		<th>Col 3</th>
+		<th>Col 4</th>
+		<th>Col 5</th>
+	</tr>
+</thead>
+<tbody>
+
+</tbody>
+<tfoot>
+	<tr>
+		<th>Col 1</th>
+		<th>Col 2</th>
+		<th>Col 3</th>
+		<th>Col 4</th>
+		<th>Col 5</th>
+	</tr>
+</tfoot>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="clients_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>User name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
+
+
+{% endblock %}
+
+
